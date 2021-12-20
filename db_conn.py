@@ -38,14 +38,14 @@ if __name__ == '__main__':
 
     # Insert a row
     # sql = ''' INSERT INTO transaksi(username, invoice_code, private_key)
-    #           VALUES('johndoe', 'INV/16-12-2021/101', 192788) '''
+    #           VALUES('michael', 'INV/17-12-2021/211', 7851245) '''
     # cur = conn.cursor()
     # cur.execute(sql)
     # conn.commit()
 
     # Select data
     cur = conn.cursor()
-    cur.execute("SELECT private_key FROM transaksi WHERE username=? AND invoice_code=?", ('johndoe', 'INV/16-12-2021/101',))
+    cur.execute("SELECT private_key FROM transaksi WHERE username=? AND invoice_code=?", ('michael', 'INV/17-12-2021/211',))
     rows = cur.fetchone()
     print(rows[0])
 
